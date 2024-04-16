@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <title>Portfolio</title>
+        <style>
+            * {
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    body{
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: 'poppins', sans-serif;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items:  center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+    }
+    nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li{
+        list-style: none;
+        margin: 0 23px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    nav ul li a:hover{
+        color: rgb(153, 153, 226);
+        font-size: 1.04rem;
+    }
+    .left{
+        font-size: 1.5rem;
+    }
+    .firstSection{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 130px 0;
+    }
+    .firstSection > div{
+        width: 30%;
+    }
+    .leftSection{
+        font-size: 2.4rem;
+        white-space: nowrap;
+    }
+    .leftSection .buttons{
+        padding: 50px 0;
+    }
+    .leftSection .btn{
+        padding: 12px;
+        background: #1e2167;
+        color: white;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .rightSection img{
+        width: 80%;
+    }
+    .purple{
+        color: rgb(170, 107, 228);
+    }
+    #element{
+        color: rgb(170, 107, 240);
+    }
+    .secondSection{
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+    }
+    main hr{
+        border: 0;
+        background: #9c97f1;
+        height: 1.2px;
+        margin: 60px 84px;
+    }
+    .skillsSection ul{
+        margin-left: 70px;
+    }
+    .skillsSection p{
+        margin-top: 20px;
+        color:rgb(202, 167, 233);
+        font-size: 19px;
+    }
+    .bullets{
+        color: #8b8b8b;
+        margin-right: 10px;
+    }
+    .bullets2{
+        color: #8b8b8b;
+        margin-right: 10px;
+        font-size: 30px;
+    }
+    .ThirdSection{
+        max-width: 80vw;
+        margin: auto;
+        height: 62vh;
+    }
+    .FourthSection{
+        max-width: 80vw;
+        margin: auto;
+        height: 56vh;
+        font-size: 21px;
+    }
+    .FifthSection{
+        max-width: 80vw;
+        margin: auto;
+        height: 40vh;
+        font-size: 21px;
+    }
+    .sixthSection{
+        max-width: 80vw;
+        margin: auto;
+        height: 47vh;
+        font-size: 21px;
+    }
+    footer{
+        background-color: #27273a;
+    }
+    .footer{
+        display: flex;
+        padding: 23px 122px;
+        justify-content: space-evenly;
+    }
+    .footer ul{
+        list-style: none;
+    }
+    .footer > div{
+        width: 123px;
+    }
+    footer .footer-rights{
+        text-align: center;
+        color: gray;
+        padding: 12px;
+    }
+    .ThirdSection h2{
+        margin-top: 20px;
+        margin-bottom: 32px;
+    }
+    .FourthSection h3{
+        margin-top: 10px;
+        margin-bottom: 32px;
+    }
+    .FifthSection h4{
+        margin-top: 10px;
+        margin-bottom: 32px;
+    }
+    .sixthSection h5{
+        margin-top: 10px;
+        margin-bottom: 32px;
+        font-size: 24px;
+    }
+    .ThirdSection ul{
+        font-size: 19px;
+        margin-left: 79px;
+    }
+    .ThirdSection p{
+        margin-top: 10px;
+        color: #CAA7E9;
+    }
+    .FourthSection p{
+        margin-top: 10px;
+        color: #CAA7E9;
+    }
+    .FourthSection ul{
+        font-size: 19px;
+        margin-left: 79px;
+    }
+    .FifthSection p{
+        margin-top: 10px;
+        color: #CAA7E9;
+    }
+    .FifthSection ul{
+        font-size: 20px;
+        margin-left: 79px;
+    }
+    .sixthSection p{
+        margin-top: 10px;
+        color: #CAA7E9;
+    }
+    .sixthSection ul{
+        font-size: 20px;
+        margin-left: 79px;
+    }
+    .subheading{
+        color: #7f4c8f;
+        font-size: 21px;
+    }
+    .title{
+        font-size: 20px;
+        color: #7f4c8f;
+    }
+    .Institute{
+        font-size: 20px;
+        color: #7f4c8f;
+    }
+            </style>
+        </head>
+        <body>
+            <header>
+                <nav>
+                    <div class="left">Nikesh's Portfolio</div>
+                    <div class="right"></div>
+                    <ul>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Skills">Skills</a></li>
+                        <li><a href="#Experience">Experience</a></li>
+                        <li><a href="#Qualification">Qualification</a></li>
+                        <li><a href="#Languages">Languages</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section class="firstSection">
+                    <div class="leftSection">
+                        Hi, My name is <span class="purple"><strong>Nikesh</strong></span>
+                        <div>and I am a </div>
+                        <span id="element"></span>
+                        <div class="buttons">
+                            <button class="btn">Download Resume</button>
+                            <button class="btn">Visit GIthub</button>
+                        </div>
+                    </div>
+                    <div class="rightSection">
+                        <img src="image1.png" alt="">
+                    </div>
+                    </section>
+                    <hr>
+                    <section class="sixthSection"  id="About">
+                        <h5>About</h5>
+                        <ul>
+                            <p>Highly-motivated employee with desire to take on new challenges. Strong worth ethic,</p>
+                            <p>adaptability and exceptional interpersonal skills.<br></p>
+                            <p>Adept at working effectively unsupervised and quickly mastering new skills.<br></p>
+                            <p>Hardworking employee with customer service, multitasking and time management abilities.</p>
+                            <p>Devoted to giving every customer a positive and memorable experience.</p>
+                        </ul>
+                    </section>
+                    <section class="secondSection"  id="Skills">
+                        <h1>Skills</h1>
+                        <div class="skillsSection">
+                        <ul>
+                            <p><span class="bullets">&#x2605;</span> Team Leadership</p>
+                            <p><span class="bullets">&#x2605;</span> Creativity and Innovation</p>
+                            <p><span class="bullets">&#x2605;</span> Computer Programming</p>
+                            <p><span class="bullets">&#x2605;</span> Engineering Design</p>
+                            <p><span class="bullets">&#x2605;</span> Project Coordination</p>
+                            <p><span class="bullets">&#x2605;</span> Creative Thinking</p>
+                            <p><span class="bullets">&#x2605;</span> Active Listening</p>
+                            <p><span class="bullets">&#x2605;</span> Data Research</p>
+                            <p><span class="bullets">&#x2605;</span> Strong Work Ethic</p>
+                        </ul>
+                        </div>
+                    </section>
+                    <section class="ThirdSection" id="Experience">
+                        <h2>Experience</h2>
+                        <ul>
+                        <p><span class="title">ENGINEERING STUDENT</span>, 10/2023-Current<br></p>
+                        <p><span class="subheading">Fresher</span>, Sonipat, India<br></p>
+                        <p><span class="bullets2">&bull;</span> Performed calculations to determine material requirements, labor costs, and project completion dates.<br></p>
+                        <p><span class="bullets2">&bull;</span> Created reports outlining project objectives, timelines, and budgets.<br></p>
+                        <p><span class="bullets2">&bull;</span> Designed engineering experiments.<br></p>
+                        <p><span class="bullets2">&bull;</span> Analyzed customer specifications to ensure that all design requirements were met.</p>
+                        </ul>
+                    </section>
+                    <section class="FourthSection" id="Qualification">
+                        <h3>Qualification</h3>
+                        <ul>
+                            <p><span class="bullets2">&bull;</span><span class="Institute">Saraswati Shiksha Sansthan Sr. Sec. School<br></span> 10th (2020-21)</p>
+                            <p><span class="bullets2">&bull;</span><span class="Institute">Saraswati Shiksha Sansthan Sr. Sec. School<br></span> 12th (2022-23)</p>
+                            <p><span class="bullets2">&bull;</span><span class="Institute">Hindu College of Engineering<br></span> BTech in Computer Science Engineering (2023-27)</p>
+                        </ul>
+                    </section>
+                    <section class="FifthSection" id="Languages">
+                        <h4>Languages</h4>
+                        <ul>
+                            <p><span class="bullets2">&bull;</span>Hindi: Mother Language</p>
+                            <p><span class="bullets2">&bull;</span>English: Intermediate</p>
+                        </ul>
+                    </main>
+            <footer>
+                <div class="footer">
+                    <div class="footer-first">Nikesh's Portfolio</div>
+                    <div class="footer-second">
+                        <ul>
+                            <li>Home</li>
+                            <li>Contact</li>
+                            <li>Services</li>
+                            <li>Projects</li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                    <div class="footer-third">
+                        <ul>
+                            <li>Home</li>
+                            <li>Contact</li>
+                            <li>Services</li>
+                            <li>Projects</li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                    <div class="footer-fourth">
+                    <ul>
+                        <li>Home</li>
+                        <li>Contact</li>
+                        <li>Services</li>
+                        <li>Projects</li>
+                        <li>About</li>
+                  </ul>
+                </div>
+                </div>
+                <div class="footer-rights">
+                   Copyright &#169; nikeshsportfolio.com | All rights reserved
+                </div>
+            </footer>
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <script>
+                var typed = new Typed('#element', {
+                  strings: ['Student', 'Web developer'],
+                  typeSpeed: 50,
+                });
+              </script>
+        </body>
+    </html>

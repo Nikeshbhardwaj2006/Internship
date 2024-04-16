@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgb(201, 201, 201);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        .Calculate{
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(223, 223, 223);
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 6.5rem;
+            background-color: #b7b7b7;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+        }
+        .left{
+            font-size: 1.5rem;
+        }
+        .image1{
+            width: 105px;
+            margin-top: 30px;
+            margin-left: -81px;
+        }
+        .middle{
+            margin-top: 15px;
+            font-size: 42px;
+            font-weight: bold;
+            padding-left: 135px;
+        }
+        .settings-image{
+            width: 50px;
+        }
+        .settings-image, .profile-image, .hamburger-image{
+            width: 47px;
+            margin-top: 13px;
+            margin-left: -10px;
+        }
+        .right ul{
+            margin-right: -80px;
+        }
+        .doubt {
+            display: inline-block;
+            width: 110px;
+            margin-left: 520px;
+            margin-top: 0;
+            position: fixed;
+            top: 79%; 
+            left: 52%;
+        }
+        .ask-now {
+            position: fixed;
+            font-size: 18px; 
+            font-weight: bold;
+            color: #000; 
+            display: inline-block;
+            margin-left: 520px;
+            margin-top: 0;
+            position: fixed;
+            top: 95%; 
+            left: 53.5%;
+        }
+    </style>
+</head>
+<body><header>
+    <nav>
+        <div class="left">
+            <ul><img class="image1" src="pictures/logo7.png" alt=""></ul></div>
+        <div class="middle">
+            BMI CALCULATOR</div>
+        <div class="right">
+        <ul>
+            <li><a href="/"><img class="settings-image" src="pictures/logo5.png" alt=""></a></li>
+            <li><a href="/"><img class="profile-image" src="pictures/logo6.png" alt=""></a></li>
+            <li><a href="/"><img class="hamburger-image" src="pictures/logo8.png" alt=""></a></li>
+        </ul>
+        </div>
+    </nav>
+</header>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form id="bmiForm">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+            <button class="Calculate" type="submit">Calculate BMI</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById("bmiForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var weight = parseFloat(document.getElementById("weight").value);
+            var height = parseFloat(document.getElementById("height").value);
+
+            if (isNaN(weight) || isNaN(height)) {
+                alert("Please enter valid weight and height.");
+                return;
+            }
+
+            var heightInMeters = height / 100;
+            var bmi = weight / (heightInMeters * heightInMeters);
+            var bmiCategory = "";
+
+            if (bmi < 18.5) {
+                bmiCategory = "Underweight";
+            } else if (bmi >= 18.5 && bmi < 25) {
+                bmiCategory = "Normal weight";
+            } else if (bmi >= 25 && bmi < 30) {
+                bmiCategory = "Overweight";
+            } else {
+                bmiCategory = "Obese";
+            }
+
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = "<p>Your BMI: " + bmi.toFixed(2) + "</p>";
+            resultElement.innerHTML += "<p>Category: " + bmiCategory + "</p>";
+        });
+    </script>
+    <div>
+        <img class="doubt" src="pictures/any question.png" alt="">
+        <p class="ask-now">Ask Now</p>
+    </div>
+</body>
+</html>
